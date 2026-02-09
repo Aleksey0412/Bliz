@@ -107,5 +107,9 @@
     <Resource Include="Image\черта_актив.png" />
     <Resource Include="Image\черта_неактив.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\шестеня_актив.jpg" />
+    <Resource Include="Image\Шестеня_неактив.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
