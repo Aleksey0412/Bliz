@@ -58,5 +58,13 @@ namespace Bliz
             else
                 LeftGrid.Visibility = Visibility.Hidden;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (RightGrid.Visibility == Visibility.Hidden)
+                RightGrid.Visibility = Visibility.Visible;
+            else
+                RightGrid.Visibility = Visibility.Hidden;
+        }
     }
 }
