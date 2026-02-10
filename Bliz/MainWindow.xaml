@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bliz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="515" Width="365" WindowStartupLocation="CenterScreen" >
+        Title="MainWindow" Height="515" Width="365" WindowStartupLocation="CenterScreen" WindowStyle="None" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF23203E" Offset="0.9"/>
@@ -103,7 +103,7 @@
         </Grid>
 
         <!--  элемент Border -->
-        <Border x:Name="CbmBorder" Grid.Row="1" Height="24" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" 
+        <Border x:Name="CbmBorder" Grid.Row="2" Height="24" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" 
         Margin="25,15,0,0" CornerRadius="2" BorderThickness="1" Background="Black">
 
             <Border.Style>
@@ -286,7 +286,8 @@
             </Button>
         </Border>
 
-        <Grid Grid.Row="2" Height="125" Width=" 310" Name="RightGrid"
+        <!--  Grid  RightGrid  -->
+        <Grid Name="RightGrid" Grid.Row="2" Height="125" Width=" 310" 
       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,42,0,0" Visibility="Hidden">
 
             <Polygon Fill="Black" StrokeThickness="3" 
@@ -317,8 +318,11 @@
                     <Button Style="{StaticResource ComboboxButton}">
                         <Grid Width="299" Margin="-30 0 0 0">
                             <TextBlock Text="Продолжить без авторизации" Margin="30 0 0 0" HorizontalAlignment="Center"/>
-                            <!--<Image Source="/Image/шестеня_актив.jpg" HorizontalAlignment="Left" Margin="10 0 0 0"
-                                   Height="13" Width="13"/>-->
+                            
+                            <!-- 
+                            <Image Source="/Image/шестеня_актив.jpg" HorizontalAlignment="Left"
+                            Margin="10 0 0 0" Height="13" Width="13"/> 
+                            -->
                         </Grid>
                     </Button>
                 </StackPanel>
