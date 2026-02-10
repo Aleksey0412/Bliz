@@ -102,7 +102,7 @@
             <Image Source="/Image/logo.png"/>
         </Grid>
 
-        <!--  элемент Border -->
+        <!--  Border CbmBorder -->
         <Border x:Name="CbmBorder" Grid.Row="2" Height="24" Width="40" HorizontalAlignment="Left" VerticalAlignment="Top" 
         Margin="25,15,0,0" CornerRadius="2" BorderThickness="1" Background="Black">
 
@@ -133,7 +133,7 @@
                 </Style>
             </Border.Style>
 
-            <!-- Button Выбор языка -->
+            <!-- Button Страны  (Выбор языка) -->
             <Button Style="{StaticResource ComboboxButton}" Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
 
