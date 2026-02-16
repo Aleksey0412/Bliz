@@ -15,6 +15,7 @@
     </Window.Background>
     
     <Window.Resources>
+        <!-- Style ComboboxButton  -->
         <Style x:Key="ComboboxButton" TargetType="Button">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
             <Setter Property="Background" Value="#FF1B1F29"/>
@@ -40,6 +41,74 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style CmbBtn  -->
+        <Style x:Key="CmbBtn" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Background" Value="#FF272E3B"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Foreground" Value="#FF929496"/>
+            <Setter Property="FontSize" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border"  BorderThickness="0"  BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,8,8,8"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"  Value="True">
+                                <Setter  Property="Background" Value="#FF323945"/>
+                                <Setter  Property="Foreground" Value="#FFC3C4C8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style TB  -->
+        <Style x:Key="TB" TargetType="TextBox">
+            <Setter Property="Background" Value="#FF12141A"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#FF2D333D"/>
+            <Setter Property="Padding" Value="10,8,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid x:Name="root" 
+              Height="{TemplateBinding Height}"
+              Width="{TemplateBinding Width}"
+              SnapsToDevicePixels="True">
+                            <Border x:Name="Background" 
+                    BorderThickness="1"
+                    CornerRadius="2" 
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"/>
+                            <ScrollViewer x:Name="PART_ContentHost"
+                          BorderThickness="0"
+                          Padding="{TemplateBinding Padding}"
+                          IsTabStop="False"
+                          Background="{x:Null}"
+                          TextElement.Foreground="{TemplateBinding Foreground}"/>
+                        </Grid>
+
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Background" Property="BorderBrush" Value="#ff383c44"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Background" Property="BorderBrush" Value="#ff10578C"/>
+                                <Setter TargetName="Background" Property="Background" Value="#ff0e1116"/>
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
@@ -186,25 +255,25 @@
             <Grid Height="132" Width="190" HorizontalAlignment="Left"
                   VerticalAlignment="Top" Margin="0,10,0,0">
                 <StackPanel Orientation="Vertical">
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Америка" />
                     </Button>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Еврова" />
                     </Button>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Азия" />
                     </Button>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Китай" />
                     </Button>
 
                     <Polygon Fill="White" Points="0,3,190,3" StrokeThickness="1" Stroke="#ff40454E"/>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Мне нужна помощь" />
                     </Button>
                 </StackPanel>
@@ -299,11 +368,11 @@
             <Grid Height="132" Width="299" HorizontalAlignment="Center" 
           VerticalAlignment="Top" Margin="0,10,0,0">
                 <StackPanel Orientation="Vertical">
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}" >
                         <TextBlock Text="Использовать последний статус" />
                     </Button>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <TextBlock Text="Невидимый" />
                     </Button>
 
@@ -311,18 +380,17 @@
 
                     <Polygon Fill="White" Points="0,3,310,3" StrokeThickness="1" Stroke="#ff40454E"/>
 
-                    <Button Style="{StaticResource ComboboxButton}">
-                        <TextBlock Text="Настройки" />
+                    <Button Style="{StaticResource CmbBtn}">
+                        <TextBlock Text="Настройки"  />
                     </Button>
 
-                    <Button Style="{StaticResource ComboboxButton}">
+                    <Button Style="{StaticResource CmbBtn}">
                         <Grid Width="299" Margin="-30 0 0 0">
                             <TextBlock Text="Продолжить без авторизации" Margin="30 0 0 0" HorizontalAlignment="Center"/>
                             
-                            <!-- 
                             <Image Source="/Image/шестеня_актив.jpg" HorizontalAlignment="Left"
-                            Margin="10 0 0 0" Height="13" Width="13"/> 
-                            -->
+                            Margin="35 0 0 0" Height="13" Width="13"/> 
+                           
                         </Grid>
                     </Button>
                 </StackPanel>
