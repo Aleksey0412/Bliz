@@ -390,6 +390,7 @@
                             
                             <Image Source="/Image/шестеня_актив.jpg" HorizontalAlignment="Left"
                             Margin="35 0 0 0" Height="13" Width="13"/> 
+                            
                            
                         </Grid>
                     </Button>
